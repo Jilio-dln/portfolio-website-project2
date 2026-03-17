@@ -36,6 +36,14 @@ Dit project helpt mij om:
 
 [https://jilio-dillen-portfolio.be/project2](https://jilio-dillen-portfolio.be/project2)
 
+## Laatste wijzigingen
+
+* Repository opgezet en gekoppeld aan GitHub
+* HTML-pagina's en CSS toegevoegd
+* Afbeeldingen (img/) overgenomen van portfolio project 1
+* CV-bestand (docs/cv-jilio-dillen.pdf) toegevoegd
+* .gitignore aangemaakt
+
 ## Auteur
 
 Jilio Dillen – Student Graduaat Programmeren – Thomas More
