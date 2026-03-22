@@ -49,6 +49,18 @@ body {
   border: 2px solid #C6A75E;
 }
 
+.navbar-toggler {
+  border-color: rgba(198,167,94,0.5);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C6A75E' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(198,167,94,0.3);
+}
+
 /* ================================================= */
 /* HERO SECTIE (HOME) */
 /* ================================================= */
@@ -176,12 +188,6 @@ body {
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-.footer-container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 14px;
-}
 
 .footer-naam{
   margin: 0;
@@ -838,42 +844,6 @@ body {
 /* ADRES TEKST */
 .adres-tekst{
   color: rgba(255,255,255,0.70);
-}
-
-/* FORMULIER ELEMENTEN */
-.form-groep{
-  margin-bottom: 18px;
-}
-
-.form-groep label{
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.form-groep input,
-.form-groep textarea{
-  width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.15);
-  background-color: rgba(255,255,255,0.04);
-  color: white;
-  font-family: 'Inter', sans-serif;
-  box-sizing: border-box;
-}
-
-/* PLACEHOLDER TEKST */
-.form-groep input::placeholder,
-.form-groep textarea::placeholder{
-  color: rgba(255,255,255,0.5);
-}
-
-/* FOCUS EFFECT OP INPUTVELDEN */
-.form-groep input:focus,
-.form-groep textarea:focus{
-  outline: none;
-  border-color: #C6A75E;
 }
 
 /* VERZENDKNOP VAN HET FORMULIER */
