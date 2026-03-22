@@ -517,8 +517,8 @@ body {
 /* INTERESSES PAGINA */
 /* ================================================= */
 
-/* HERO BANNER MET ACHTERGRONDAFBEELDING */
-.interesses-hero{
+/* HERO */
+.interesses-hero {
   position: relative;
   height: 40vh;
   background-image: url("../img/interesses-banner.jpg");
@@ -530,194 +530,252 @@ body {
   text-align: center;
 }
 
-/* DONKERE OVERLAY OVER DE HERO AFBEELDING */
-.interesses-hero::before{
+.interesses-hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(15, 23, 42, 0.75);
 }
 
-/* TEKST IN DE HERO SECTIE */
-.interesses-hero-content{
+.interesses-hero-content {
   position: relative;
   color: white;
   padding: 0 20px;
 }
 
-.interesses-hero h1{
+.interesses-hero h1 {
   margin: 0 0 10px;
   font-size: 38px;
 }
 
-.interesses-hero p{
+.interesses-hero p {
   margin: 0;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 17px;
 }
 
-/* ALGEMENE CONTENT SECTIE VAN DE INTERESSES PAGINA */
-.interesses-content{
-  padding: 60px 10%;
+/* CAROUSEL SECTIE — VOLLEDIG SCHERM ALS HERO */
+.carousel-sectie {
+  background-color: #0C1425;
+}
+
+/* SLIDE VULT VOLLEDIG SCHERM MINUS NAVBAR */
+.carousel-slide {
+  position: relative;
+  height: calc(100vh - 64px);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* DONKERE GRADIËNT: SUBTIEL BOVEN, ZWAAR ONDER */
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(12, 20, 37, 0.25) 0%,
+    rgba(12, 20, 37, 0.90) 100%
+  );
+}
+
+/* TEKST LINKSONDER OP DE SLIDE */
+.slide-tekst {
+  position: relative;
+  z-index: 2;
+  padding: 0 8% 60px;
+  color: white;
+  max-width: 750px;
+}
+
+/* PAGINATITEL BOVENAAN DE SLIDE-TEKST */
+.slide-paginatitel {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 20px;
+}
+
+.slide-tag {
+  display: inline-block;
+  background-color: rgba(198, 167, 94, 0.18);
+  border: 1px solid rgba(198, 167, 94, 0.5);
+  color: #C6A75E;
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.slide-tekst h3 {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  line-height: 1.15;
+}
+
+.slide-tekst p {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.65;
+  margin: 0;
+  max-width: 55ch;
+}
+
+/* INDICATORS */
+#interessesCarousel .carousel-indicators {
+  margin-bottom: 20px;
+}
+
+#interessesCarousel .carousel-indicators button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.35);
+  opacity: 1;
+}
+
+#interessesCarousel .carousel-indicators button.active {
+  background-color: #C6A75E;
+}
+
+/* INHOUD SECTIE */
+.interesses-content {
+  padding: 70px 10%;
   background-color: #0F172A;
   color: white;
 }
 
-/* BLOK MET TEKST EN AFBEELDING (SPORT / F1) */
-.interesse-blok{
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  margin-bottom: 70px;
+/* HERHAALBAAR SECTIEBLOK */
+.inhoud-sectie {
+  margin-bottom: 65px;
 }
 
-/* OMGEKEERDE LAYOUT (AFBEELDING LINKS) */
-.interesse-blok.reverse{
-  flex-direction: row-reverse;
+.inhoud-sectie:last-child {
+  margin-bottom: 0;
 }
 
-/* TEKSTGEDEELTE VAN HET BLOK */
-.interesse-tekst{
-  flex: 1;
-}
-
-.interesse-tekst h2{
-  margin-top: 0;
+.inhoud-titel {
   font-size: 28px;
+  margin: 0 0 28px;
+  color: white;
 }
 
-.interesse-tekst p{
-  color: rgba(255,255,255,0.82);
-  line-height: 1.7;
-}
-
-/* AFBEELDING VAN HET BLOK */
-.interesse-afbeelding{
-  flex: 1;
-  max-width: 75%;
-  height: 350px;
-}
-
-.interesse-afbeelding img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.10);
-}
-
-/* BLOK MET PERSOONLIJKE TEKST */
-.persoonlijk-blok{
-  margin-bottom: 60px;
-}
-
-.persoonlijk-blok h2{
-  font-size: 28px;
-}
-
-.mini-titel{
-  font-size: 28px;
-}
-
-.persoonlijk-blok p{
-  color: rgba(255,255,255,0.82);
-  line-height: 1.7;
-}
-
-/* TABEL MET OVERZICHT VAN HOBBY'S */
-.overzicht-blok h3{
-  margin-bottom: 15px;
-}
-
-.interesses-tabel{
-  width: 100%;
-  border-collapse: collapse;
-  background-color: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.10);
-}
-
-.interesses-tabel caption{
-  caption-side: bottom;
-  padding: 10px;
-  color: rgba(255,255,255,0.7);
-  font-size: 14px;
-}
-
-.interesses-tabel th,
-.interesses-tabel td{
-  border: 1px solid rgba(255,255,255,0.10);
-  padding: 12px;
-  text-align: left;
-}
-
-.interesses-tabel th{
-  background-color: rgba(255,255,255,0.06);
-}
-
-/* EXTRA BLOKKEN (VRIENDEN / DISCIPLINE) */
-.extra-grid{
+/* TWEE-KOLOM GRID VOOR KAARTEN */
+.inhoud-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 40px;
+  gap: 28px;
 }
 
-.extra-kaart{
-  background-color: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+.inhoud-kaart {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
   padding: 28px;
 }
 
-.extra-kaart h2{
+.inhoud-kaart h3 {
   margin-top: 0;
   margin-bottom: 14px;
-  font-size: 26px;
+  font-size: 20px;
+  color: white;
 }
 
-.extra-kaart p{
-  color: rgba(255,255,255,0.82);
-  line-height: 1.7;
-  margin-bottom: 16px;
+.inhoud-kaart p {
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.75;
+  margin-bottom: 14px;
 }
 
-/* BLOK MET PERSOONLIJKE KENMERKEN */
-.kenmerken-blok{
-  background-color: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  padding: 28px;
-  margin-bottom: 50px;
+.inhoud-kaart p:last-child {
+  margin-bottom: 0;
 }
 
-.kenmerken-blok h3{
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 24px;
+/* PASSIE BLOK — TWEE KOLOMMEN VRIJE TEKST */
+.passie-blok {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
 }
 
-/* GRID MET PERSOONLIJKE EIGENSCHAPPEN */
-.eigenschappen-grid{
+.passie-tekst h3 {
+  font-size: 20px;
+  margin: 0 0 14px;
+  color: white;
+}
+
+.passie-tekst p {
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.passie-tekst p:last-child {
+  margin-bottom: 0;
+}
+
+/* EIGENSCHAPPEN GRID */
+.eigenschappen-grid {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
 
-.eigenschappen-grid li{
-  background-color: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
+.eigenschappen-grid li {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
-  padding: 14px 16px;
-  color: rgba(255,255,255,0.82);
+  padding: 14px 18px;
+  color: rgba(255, 255, 255, 0.82);
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
-/* HOVER EFFECT OP DE EIGENSCHAPPEN */
+.eigenschappen-grid li:hover {
+  background-color: rgba(198, 167, 94, 0.15);
+  border-color: #C6A75E;
+}
 
-.eigenschappen-grid li:hover{
-  background-color: rgba(198, 167, 94, 0.521);
-  border: #C6A75E solid 1px;
+/* INTERESSES TABEL */
+.interesses-tabel {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.interesses-tabel caption {
+  caption-side: bottom;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  text-align: left;
+}
+
+.interesses-tabel th,
+.interesses-tabel td {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  padding: 13px 16px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.interesses-tabel thead th {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: white;
+  font-weight: 600;
+}
+
+.interesses-tabel tbody tr:hover td {
+  background-color: rgba(198, 167, 94, 0.06);
 }
 
 
