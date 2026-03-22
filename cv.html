@@ -1,158 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jilio Dillen — Front-end Developer</title>
+  <title>CV — Jilio Dillen</title>
   <link rel="icon" type="image/png" href="img/favicon-Jilio.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/stijl.css" />
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="vendor/swiper-bundle.min.css">
+  <!-- Eigen stijlen -->
+  <link rel="stylesheet" href="css/stijl.css" />
 </head>
 <body>
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <nav class="navbar navbar-expand-lg sticky-top" id="hoofdnav">
-      <div class="container-fluid px-4">
-        <!-- LOGO -->
-        <a class="navbar-brand" href="index.html">
-          <img src="img/Logo website.jpg" alt="Logo Jilio Dillen" />
+
+  <!-- ============ NAVIGATIE ============ -->
+  <nav class="navbar navbar-expand-lg sticky-top" id="hoofdnav">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/Logo website.jpg" alt="Logo Jilio Dillen" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="project.html">Projecten</a></li>
+          <li class="nav-item"><a class="nav-link" href="interesses.html">Interesses</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ MAIN ============ -->
+  <main class="cv">
+
+    <!-- ── HEADER: PROFIELFOTO + INTRO ── -->
+    <div class="cv-header">
+      <div class="cv-titel">
+        <p class="section-label">Curriculum Vitae</p>
+        <h1>Jilio Dillen</h1>
+        <p class="cv-intro">
+          Front-end developer in opleiding aan Thomas More, Campus Lier. Gedreven door precisie, performance en een sterk oog voor detail. Altijd op zoek naar nieuwe uitdagingen in de wereld van webontwikkeling.
+        </p>
+        <a href="docs/cv-jilio-dillen.pdf" class="cv-download" download>
+          <i class="bi bi-download me-1"></i> Download CV (PDF)
         </a>
+      </div>
+      <div class="profielfoto">
+        <!-- Vervang door je eigen foto, bv. img/profielfoto.jpg -->
+        <img src="img/Logo website.jpg" alt="Foto van Jilio Dillen" />
+      </div>
+    </div>
 
-        <!-- HAMBURGER KNOP (mobiel) -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMenu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- ── OPLEIDING + WERKERVARING ── -->
+    <div class="cv-grid cv-sectie">
 
-        <!-- NAV LINKS -->
-        <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item"><a class="nav-link active" href="cv.html">CV</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="project.html">Projecten</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="interesses.html">Interesses</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
+      <!-- OPLEIDING -->
+      <div class="cv-blok">
+        <h2 class="cv-section-title">Overzicht van mijn opleiding</h2>
+
+        <div class="timeline-item">
+          <h4>Bachelor Toegepaste Informatica</h4>
+          <p class="periode">2024 – 2025</p>
+          <p>AP Hogeschool Antwerpen</p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Graduaat Programmeren</h4>
+          <p class="periode">2025 – 2026</p>
+          <p>Thomas More</p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Artificial Intelligence Fundamentals</h4>
+          <p class="periode">Certificaat</p>
+          <p>Cisco Networking Academy</p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Introduction to Cybersecurity</h4>
+          <p class="periode">Certificaat</p>
+          <p>Cisco Networking Academy</p>
+        </div>
+      </div>
+
+      <!-- WERKERVARING -->
+      <div class="cv-blok">
+        <h2 class="cv-section-title">Werkervaring</h2>
+
+        <div class="timeline-item">
+          <h4>Step-G Aluminium – Zomerjob</h4>
+          <p class="periode">07/2025 – 08/2025</p>
+          <p>Ondersteuning binnen de logistieke en administratieve afdeling. Verantwoordelijk voor het verwerken van gegevens, opvolgen van interne communicatie en het werken met digitale systemen binnen een professionele kantooromgeving.</p>
+          <ul>
+            <li>Administratieve ondersteuning</li>
+            <li>Logistieke opvolging</li>
+            <li>Werken met digitale systemen</li>
+            <li>Nauwkeurigheid en structuur</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Delhaize – Studentenjob</h4>
+          <p class="periode">10/2021 – heden</p>
+          <p>Studentenjob in een dynamische retailomgeving. Focus op klantgerichtheid, teamwork en efficiënt werken onder tijdsdruk.</p>
+          <ul>
+            <li>Klantgerichte service</li>
+            <li>Samenwerken in team</li>
+            <li>Verantwoordelijkheid en stiptheid</li>
           </ul>
         </div>
       </div>
-    </nav>
-
-<main>
-  <section class="contact-pagina">
-    <h1>Contact</h1>
-    <p class="contact-intro">
-      Heb je interesse in mijn profiel of wil je graag meer informatie? Neem gerust contact met mij op via e-mail, LinkedIn of het formulier hieronder.
-    </p>
-
-    <div class="contact-grid">
-      <div class="contact-blok">
-        <h2>Contactgegevens</h2>
-        <p>
-          <strong>E-mail:</strong>
-          <a href="mailto:dillenjilio@gmail.com">dillenjilio@gmail.com</a>
-        </p>
-        <p>
-          <strong>School:</strong>
-          <span class="adres-tekst">Antwerpsestraat 99, 2500 Lier</span>
-        </p>
-        <p>
-        <strong>Telefoon:</strong>
-        + 32 412 34 56 78
-        </p>
-        <div class="badge-base LI-profile-badge" data-locale="nl_NL" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="jilio-dillen-b6b6602a9" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://be.linkedin.com/in/jilio-dillen-b6b6602a9?trk=profile-badge"></a></div>
-              
-      </div>
-
-      <div class="contact-blok">
-        <h2>Stuur mij een bericht</h2>
-
-        <form action="#" method="post">
-          <div class="form-groep">
-            <label for="naam">Naam</label>
-            <input type="text" id="naam" name="naam" placeholder="Jouw naam">
-          </div>
-
-          <div class="form-groep">
-            <label for="email">E-mailadres</label>
-            <input type="email" id="email" name="email" placeholder="jouw@email.com">
-          </div>
-
-          <div class="form-groep">
-            <label for="onderwerp">Onderwerp</label>
-            <input type="text" id="onderwerp" name="onderwerp" placeholder="Onderwerp">
-          </div>
-
-          <div class="form-groep">
-            <label for="bericht">Bericht</label>
-            <textarea id="bericht" name="bericht" rows="6" placeholder="Typ hier je bericht..."></textarea>
-          </div>
-
-          <button type="submit">Verzenden</button>
-        </form>
-      </div>
     </div>
 
-    <div class="map-blok">
-      <h2>Locatie school</h2>
-      <p>
-        Hieronder zie je de locatie van mijn school via Google Maps.
-      </p>
+    <!-- ── TALENKENNIS ── -->
+    <div class="cv-blok cv-sectie">
+      <h2 class="cv-section-title">Talen</h2>
 
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.614991555119!2d4.56385177610372!3d51.13400933791274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3fc7d3dedf437%3A0x98e97032e240eff9!2sThomas%20More%20-%20Campus%20Lier!5e0!3m2!1snl!2sbe!4v1773059344459!5m2!1snl!2sbe"
-          width="100%"
-          height="350"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy">
-        </iframe>
-      </div>
-    </div>
+      <div class="row g-3">
 
-   
-  </section>
-</main>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-6">
-            <p class="footer-naam mb-0">© 2026 Jilio Dillen</p>
-          </div>
-          <div class="col-6 d-flex justify-content-end">
-            <div class="footer-socials">
-              <a href="https://www.linkedin.com/in/jilio-dillen/" target="_blank">
-                <img src="img/mw-linkedin.png" alt="LinkedIn" />
-              </a>
-
-              <a href="https://www.instagram.com/jilio_dln/" target="_blank">
-                <img src="img/mw-instagram.png" alt="Instagram" />
-              </a>
-
-              <a
-                href="https://www.facebook.com/profile.php?id=100009882249403"
-                target="_blank"
-              >
-                <img src="img/mw-facebook.png" alt="Facebook" />
-              </a>
+        <div class="col-12 col-md-4">
+          <div class="taal-badge">
+            <div class="taal-naam">Nederlands</div>
+            <div class="taal-niveau">Moedertaal · C2</div>
+            <div class="progress" style="height:5px; background:rgba(255,255,255,0.1); border-radius:3px;">
+              <div class="progress-bar" style="width:100%; background:#C6A75E; border-radius:3px;"></div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
 
+        <div class="col-6 col-md-4">
+          <div class="taal-badge">
+            <div class="taal-naam">Engels</div>
+            <div class="taal-niveau">Gevorderd · B2</div>
+            <div class="progress" style="height:5px; background:rgba(255,255,255,0.1); border-radius:3px;">
+              <div class="progress-bar" style="width:80%; background:#C6A75E; border-radius:3px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <div class="taal-badge">
+            <div class="taal-naam">Frans</div>
+            <div class="taal-niveau">Basis · A2</div>
+            <div class="progress" style="height:5px; background:rgba(255,255,255,0.1); border-radius:3px;">
+              <div class="progress-bar" style="width:35%; background:#C6A75E; border-radius:3px;"></div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- ── SKILLS ── -->
+    <div class="cv-blok cv-sectie">
+      <h2 class="cv-section-title">Skills</h2>
+
+      <div class="swiper skills-swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="skill-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+              <p>HTML5</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="skill-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+              <p>CSS3</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="skill-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+              <p>JavaScript</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="skill-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
+              <p>Bootstrap</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="skill-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
+              <p>C#</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="skill-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL / MySQL" />
+              <p>SQLL</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="skill-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+              <p>Git</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="skill-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+              <p>VS Code</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-6">
+          <p class="footer-naam mb-0">© 2026 Jilio Dillen</p>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/jilio-dillen/" target="_blank">
+              <img src="img/mw-linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="https://www.instagram.com/jilio_dln/" target="_blank">
+              <img src="img/mw-instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100009882249403" target="_blank">
+              <img src="img/mw-facebook.png" alt="Facebook" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="vendor/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.skills-swiper', {
+      slidesPerView: 3,
+      spaceBetween: 12,
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      breakpoints: {
+        576: { slidesPerView: 3 },
+        768: { slidesPerView: 4 }
+      }
+    });
+  </script>
+
+</body>
 </html>

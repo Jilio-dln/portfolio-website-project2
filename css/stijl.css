@@ -217,6 +217,28 @@ body {
   color: white;
 }
 
+/* SECTIE LABEL (goudkleurig label boven titels) */
+.section-label{
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #C6A75E;
+  margin-bottom: 6px;
+}
+
+/* SECTIE TUSSENTITEL */
+.cv-section-title{
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* SECTIE RUIMTE TUSSEN BLOKKEN */
+.cv-sectie{
+  margin-bottom: 30px;
+}
+
 /* CV HEADER MET FOTO */
 .cv-header{
   display: flex;
@@ -236,11 +258,11 @@ body {
 
 /* PROFIELFOTO */
 .profielfoto img{
-  width: 175px;
-  height: 175px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  border: 2px solid rgba(198,167,94,0.4);
 }
 
 .cv h1{
@@ -833,4 +855,184 @@ body {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.10);
+}
+
+
+/* ================================================= */
+/* CV — TIMELINE (opleiding & werkervaring)          */
+/* ================================================= */
+
+.timeline-item{
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 24px;
+}
+
+.timeline-item::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: #C6A75E;
+  border-radius: 50%;
+}
+
+.timeline-item::after{
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 20px;
+  width: 2px;
+  height: calc(100% + 4px);
+  background-color: rgba(198,167,94,0.2);
+}
+
+.timeline-item:last-child::after{
+  display: none;
+}
+
+.timeline-item h4{
+  color: white;
+  margin-bottom: 2px;
+  font-size: 16px;
+}
+
+.timeline-item p{
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.timeline-item ul{
+  padding-left: 18px;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+.timeline-item li{
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+
+/* ================================================= */
+/* CV — TALENKENNIS                                  */
+/* ================================================= */
+
+.taal-badge{
+  background-color: rgba(198,167,94,0.08);
+  border: 1px solid rgba(198,167,94,0.3);
+  border-radius: 12px;
+  padding: 18px;
+  height: 100%;
+}
+
+.taal-naam{
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 3px;
+}
+
+.taal-niveau{
+  font-size: 13px;
+  color: #C6A75E;
+  margin-bottom: 8px;
+}
+
+
+/* ================================================= */
+/* CV — SKILLS                                        */
+/* ================================================= */
+
+.skill-card{
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 14px;
+  padding: 22px 14px;
+  text-align: center;
+  transition: border-color 0.25s, background-color 0.25s, transform 0.25s;
+  cursor: default;
+}
+
+.skill-card:hover{
+  border-color: #C6A75E;
+  background-color: rgba(198,167,94,0.09);
+  transform: translateY(-4px);
+}
+
+.skill-card img{
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-card p{
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* ================================================= */
+/* CV — SKILLS SWIPER                                */
+/* ================================================= */
+
+.skills-swiper{
+  padding: 10px 40px 40px;
+}
+
+.skills-swiper .swiper-button-prev,
+.skills-swiper .swiper-button-next{
+  color: #C6A75E;
+}
+
+.skills-swiper .swiper-pagination-bullet{
+  background: rgba(255,255,255,0.3);
+  opacity: 1;
+}
+
+.skills-swiper .swiper-pagination-bullet-active{
+  background: #C6A75E;
+}
+
+/* ================================================= */
+/* RESPONSIVE — MOBILE */
+/* ================================================= */
+
+@media (max-width: 767px) {
+
+  .cv {
+    padding: 40px 5%;
+  }
+
+  .cv-header {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .profielfoto img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-tabel th,
+  .cv-tabel td {
+    font-size: 13px;
+    padding: 8px 6px;
+  }
 }
