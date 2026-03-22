@@ -646,7 +646,7 @@ body {
 
 /* INHOUD SECTIE */
 .interesses-content {
-  padding: 70px 10%;
+  padding: 70px 0;
   background-color: #0F172A;
   color: white;
 }
@@ -664,13 +664,6 @@ body {
   font-size: 28px;
   margin: 0 0 28px;
   color: white;
-}
-
-/* TWEE-KOLOM GRID VOOR KAARTEN */
-.inhoud-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
 }
 
 .inhoud-kaart {
@@ -697,13 +690,6 @@ body {
   margin-bottom: 0;
 }
 
-/* PASSIE BLOK — TWEE KOLOMMEN VRIJE TEKST */
-.passie-blok {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-}
-
 .passie-tekst h3 {
   font-size: 20px;
   margin: 0 0 14px;
@@ -720,26 +706,18 @@ body {
   margin-bottom: 0;
 }
 
-/* EIGENSCHAPPEN GRID */
-.eigenschappen-grid {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-
-.eigenschappen-grid li {
+/* EIGENSCHAPPEN ITEM */
+.eigenschappen-item {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   padding: 14px 18px;
   color: rgba(255, 255, 255, 0.82);
+  text-align: center;
   transition: background-color 0.2s, border-color 0.2s;
 }
 
-.eigenschappen-grid li:hover {
+.eigenschappen-item:hover {
   background-color: rgba(198, 167, 94, 0.15);
   border-color: #C6A75E;
 }
