@@ -780,12 +780,29 @@ body {
   margin-bottom: 35px;
 }
 
-/* GRID MET CONTACTGEGEVENS EN FORMULIER */
-.contact-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 40px;
+/* FORMULIER VELDEN — DONKERGRIJZE ACHTERGROND */
+.contact-blok .form-control,
+.contact-blok .form-select {
+  background-color: #2a303c;
+  color: white;
+  border-color: rgba(255,255,255,0.15);
+}
+
+.contact-blok .form-control::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+.contact-blok .form-control:focus,
+.contact-blok .form-select:focus {
+  background-color: #2a303c;
+  color: white;
+  border-color: #C6A75E;
+  box-shadow: 0 0 0 0.2rem rgba(198,167,94,0.2);
+}
+
+.contact-blok .form-select option {
+  background-color: #2a303c;
+  color: white;
 }
 
 /* BLOKKEN VOOR CONTACTGEGEVENS EN KAART */

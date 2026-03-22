@@ -68,7 +68,8 @@
       Heb je interesse in mijn profiel of wil je graag meer informatie? Neem gerust contact met mij op via e-mail, LinkedIn of het formulier hieronder.
     </p>
 
-    <div class="contact-grid">
+    <div class="row g-4 mb-4">
+      <div class="col-12 col-md-6">
       <div class="contact-blok">
         <h2>Contactgegevens</h2>
         <p>
@@ -86,33 +87,51 @@
         <div class="badge-base LI-profile-badge" data-locale="nl_NL" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="jilio-dillen-b6b6602a9" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://be.linkedin.com/in/jilio-dillen-b6b6602a9?trk=profile-badge"></a></div>
               
       </div>
+      </div>
 
+      <div class="col-12 col-md-6">
       <div class="contact-blok">
         <h2>Stuur mij een bericht</h2>
 
-        <form action="#" method="post">
-          <div class="form-groep">
-            <label for="naam">Naam</label>
-            <input type="text" id="naam" name="naam" placeholder="Jouw naam">
+        <form action="https://tm-statweb.be/forms.php" method="post">
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="voornaam" class="form-label">Voornaam</label>
+              <input type="text" class="form-control" id="voornaam" name="voornaam" placeholder="Jouw voornaam" required>
+            </div>
+            <div class="col-md-6">
+              <label for="naam" class="form-label">Naam</label>
+              <input type="text" class="form-control" id="naam" name="naam" placeholder="Jouw naam" required>
+            </div>
           </div>
 
-          <div class="form-groep">
-            <label for="email">E-mailadres</label>
-            <input type="email" id="email" name="email" placeholder="jouw@email.com">
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mailadres</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="jouw@email.com" required>
           </div>
 
-          <div class="form-groep">
-            <label for="onderwerp">Onderwerp</label>
-            <input type="text" id="onderwerp" name="onderwerp" placeholder="Onderwerp">
+          <div class="mb-3">
+            <label for="interesse" class="form-label">Interesse in skills</label>
+            <select class="form-select" id="interesse" name="interesse">
+              <option value="" selected disabled>Kies een skill...</option>
+              <option value="html-css">HTML & CSS</option>
+              <option value="javascript">JavaScript</option>
+              <option value="bootstrap">Bootstrap</option>
+              <option value="php">PHP</option>
+              <option value="sql">SQL / Databases</option>
+              <option value="ux-design">UX Design</option>
+              <option value="anders">Anders</option>
+            </select>
           </div>
 
-          <div class="form-groep">
-            <label for="bericht">Bericht</label>
-            <textarea id="bericht" name="bericht" rows="6" placeholder="Typ hier je bericht..."></textarea>
+          <div class="mb-3">
+            <label for="vraag" class="form-label">Vraag</label>
+            <textarea class="form-control" id="vraag" name="vraag" rows="6" placeholder="Typ hier je vraag..."></textarea>
           </div>
 
-          <button type="submit">Verzenden</button>
+          <button type="submit" class="btn btn-primary w-100">Verzenden</button>
         </form>
+      </div>
       </div>
     </div>
 
